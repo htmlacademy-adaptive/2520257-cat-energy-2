@@ -12,9 +12,13 @@
 <body class="page__body">
   <header class="main-header">
     <a class="main-header__logo main-logo main-logo--header" href="index.html">
-      <img class="main-logo__icon" src="#" width="60" height="50" alt="Логотип Супер Кот">
-      <img class="main-logo__icon main-logo__icon--mobile" src="#" width="33" height="38" alt="Логотип Супер Кот">
-      <img class="main-logo__icon-name" src="#" width="60" height="50" alt="Cat Energy">
+      <picture>
+        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="icons/logo-desktop.svg">
+        <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="icons/logo-text">
+        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="icons/logo-tablet.svg">
+        <img class="main-logo__icon" src="icons/logo-mobile.svg" width="33" height="38" alt="Логотип Супер Кот">
+        <img class="main-logo__icon-name" src="icons/logo-text.svg" width="101" height="18" alt="Cat Energy">
+      </picture>
     </a>
     <nav class="main-nav">
       <button class="main-nav__toggle button" type="button">
@@ -54,7 +58,11 @@
       <p class="main-hero__description">
         Занялся собой? Займись котом!
       </p>
-      <img class="main-hero__image" src="#" width="10" height="10" alt="Фотография Упаковки Cat Energy Pro с курицей!">
+      <picture>
+        <source media="(min-width: 1440px)" width="552" height="449" type="image/png" srcset="images/index/index-can@1x.png 1x, images/index/index-can@2x.png 2x">
+        <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/index/index-can-tablet@1x.png 1x, images/index/index-can-tablet@2x.png 2x">
+        <img class="main-hero__image" src="images/index/index-can-mobile@1x.png" srcset="images/index/index-can-mobile@2x.png 2x" width="280" height="270" alt="Фотография Упаковки Cat Energy Pro с курицей!">
+      </picture>
       <a class="main-hero__link main-button" href="#">
         Подобрать программу
       </a>
@@ -172,8 +180,18 @@
           руб.
         </p>
         <div class="example__images slider">
-          <img class="slider__image slider__image--primary" src="#" width="0" height="0" alt="Фотография упитанного кота до приема корма">
-          <img class="slider__image slider__image--secondary" src="#" width="0" height="0" alt="Фотография худого кота после приема корма Cat Energy!">
+          <div class="slider__item">
+            <picture>
+              <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/index/fat-cat@1x.png 1x, images/index/fat-cat@2x.png 2x">
+              <img class="slider__image slider__image--primary" src="images/index/fat-cat-mobile@1x.png" srcset="images/index/fat-cat-mobile@2x.png 2x" width="280" height="256" alt="Фотография упитанного кота до приема корма">
+            </picture>
+          </div>
+          <div class="slider__item">
+            <picture>
+              <source media="(min-width: 768px)" width="560" height="512" type="image/png" srcset="images/index/fit-cat@1x.png 1x, images/index/fit-cat@2x.png 2x">
+              <img class="slider__image slider__image--secondary" src="images/index/fit-cat-mobile@1x.png" srcset="images/index/fit-cat-mobile@2x.png 2x" width="280" height="256" alt="Фотография худого кота после приема корма Cat Energy!">
+            </picture>
+          </div>
           <button class="slider__toggle" type="button">
             <span class="visually-hidden">
               Кнопка слайдера.
@@ -193,15 +211,20 @@
           Санкт-Петербург
         </address>
       </div>
-      <div class="dealers-invitation__map">
+      <div class="dealers-invitation__map map">
+        <picture>
+          <source media="(min-width: 1440px)" width="1440" height="400" type="image/png" srcset="images/map/map@1x.png 1x, images/map/map@2x.png 2x">
+          <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
+          <img class="map__image" src="images/map/map-mobile@1x.png" srcset="images/map/map-mobile@2x.png 2x" width="320" height="362" alt="Наше место на карте!">
+        </picture>
       </div>
     </section>
   </main>
   <footer class="main-footer">
     <div class="main-footer__wraper">
       <div class="main-footer__logo main-logo main-logo--footer">
-        <a class="main-logo__icon-name" href="#">
-          <img class="main-logo__icon-name" src="#" width="60" height="50" alt="Cat Energy">
+        <a class="main-logo__link" href="index.html">
+          <img class="main-logo__icon-name" src="icons/logo-text.svg" width="128" height="24" alt="Cat Energy">
         </a>
       </div>
       <div class="main-footer__social social">
