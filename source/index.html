@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>Кэт энерджи</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
@@ -14,21 +14,23 @@
 </head>
 
 <body class="page__body">
-  <header class="main-header">
+  <header class="main-header promo">
     <a class="main-header__logo main-logo main-logo--header" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="icons/logo-desktop.svg">
-        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="icons/logo-tablet.svg">
-        <img class="main-logo__icon" src="icons/logo-mobile.svg" width="33" height="38" alt="Логотип Супер Кот">
+        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logos/logo-desktop.svg">
+        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logos/logo-tablet.svg">
+        <img class="main-logo__icon" src="images/logos/logo-mobile.svg" width="33" height="38" alt="Логотип Супер Кот">
       </picture>
       <picture>
-        <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="icons/logo-text">
-        <img class="main-logo__icon-name" src="icons/logo-text.svg" width="101" height="18" alt="Cat Energy">
+        <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="images/logos/logo-text.svg">
+        <img class="main-logo__icon-name" src="images/logos/logo-text.svg" width="101" height="18" alt="Cat Energy">
       </picture>
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle button" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
+      <button class="main-nav__button button main-nav__button--toggle" type="button">
+        <span class="visually-hidden">
+          Открыть меню.
+        </span>
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
@@ -48,31 +50,26 @@
             </a>
           </li>
         </ul>
-        <button class="main-nav__button button main-nav__button--toggle" type="button">
-          <span class="visually-hidden">
-            Открыть меню.
-          </span>
-        </button>
       </div>
     </nav>
-  </header>
-  <main class="main-container">
-    <section class="main-hero">
-      <h1 class="main-hero__title">Функциональное
+    <section class="promo__hero hero">
+      <h1 class="hero__title">Функциональное
         питание для котов
       </h1>
-      <p class="main-hero__description">
+      <p class="hero__description">
         Занялся собой? Займись котом!
       </p>
       <picture>
         <source media="(min-width: 1440px)" width="552" height="449" type="image/png" srcset="images/index/index-can@1x.png 1x, images/index/index-can@2x.png 2x">
         <source media="(min-width: 768px)" width="709" height="609" type="image/png" srcset="images/index/index-can-tablet@1x.png 1x, images/index/index-can-tablet@2x.png 2x">
-        <img class="main-hero__image" src="images/index/index-can-mobile@1x.png" srcset="images/index/index-can-mobile@2x.png 2x" width="280" height="270" alt="Фотография Упаковки Cat Energy Pro с курицей!">
+        <img class="hero__image" src="images/index/index-can-mobile@1x.png" srcset="images/index/index-can-mobile@2x.png 2x" width="280" height="270" alt="Фотография Упаковки Cat Energy Pro с курицей!">
       </picture>
-      <a class="main-hero__link main-button" href="#">
+      <a class="hero__link button" href="#">
         Подобрать программу
       </a>
     </section>
+  </header>
+  <main class="main-container">
     <section class="programs">
       <h2 class="visually-hidden">
         Наши программы для котов.
@@ -146,10 +143,10 @@
       </div>
     </section>
     <section class="example">
+      <h2 class="example__title">
+        Живой пример
+      </h2>
       <div class="example__wrapper">
-        <h2 class="example__title">
-          Живой пример
-        </h2>
         <p class="example__description">
           Борис сбросил 5 кг за 2 месяца, просто заменив свой
           обычный корм на Cat Energy Slim. Отличный результат
@@ -158,24 +155,24 @@
         </p>
         <ul class="example__list">
           <li class="example__item">
-            <p class="example__item-stats stats">
-              <span class="stats__number">
+            <p class="example__stats">
+              <span class="example__stats-number">
                 5
               </span>
               кг
             </p>
-            <p class="stats-description">
+            <p class="example__stats-description">
               Снижение веса
             </p>
           </li>
           <li class="example__item">
-            <p class="example__item-stats stats">
-              <span class="stats__number">
+            <p class="example__stats">
+              <span class="example__stats-number">
                 60
               </span>
               дней
             </p>
-            <p class="stats-description">
+            <p class="example__stats-description">
               Затрачено времени
             </p>
           </li>
@@ -227,10 +224,10 @@
     </section>
   </main>
   <footer class="main-footer">
-    <div class="main-footer__wraper">
+    <div class="main-footer__wrapper">
       <div class="main-footer__logo main-logo main-logo--footer">
         <a class="main-logo__link" href="index.html">
-          <img class="main-logo__icon-name" src="icons/logo-text.svg" width="128" height="24" alt="Cat Energy">
+          <img class="main-logo__icon-name" src="images/logos/logo-text.svg" width="128" height="24" alt="Cat Energy">
         </a>
       </div>
       <div class="main-footer__social social">
@@ -252,7 +249,8 @@
       </div>
       <div class="main-footer__copyright copyright">
         <p class="copyright__title">HTML Academy</p>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML Academy.">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML Academy.">
+          <img class="copyright__logo" src="images/logos/html-academy.svg" width="128" height="24" alt="Cat Energy">
         </a>
       </div>
     </div>

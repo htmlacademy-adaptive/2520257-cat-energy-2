@@ -1,0 +1,15 @@
+.gift {
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+  text-align: center;
+  background-color: $bg-color-basic-green;
+
+  @media (min-width: 768px) and (max-width: 1439px) {
+    text-align: left;
+  }
+}
+
+.gift-description {
+  //
+}

@@ -1,0 +1,51 @@
+.advantages {
+  //
+}
+
+.advantages__title {
+  font-family: $font-additional;
+  font-size: 36px;
+  line-height: 40px;
+  font-weight: 400;
+  color: #000000;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.advantages__wrapper {
+  //
+}
+
+.advantages__list {
+  //
+}
+
+.advantages__item {
+  //
+}
+
+.advantages__description {
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.advantages__description--leaf {
+  //
+}
+
+.advantages__description--water {
+  //
+}
+
+.advantages__description--cutlery {
+  //
+}
+
+.advantages__description--time {
+  //
+}

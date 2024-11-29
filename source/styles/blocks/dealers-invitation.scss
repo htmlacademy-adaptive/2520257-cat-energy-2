@@ -1,0 +1,39 @@
+.dealers-invitation {
+  &--bg {
+    background-color: $bg-color-primary;
+
+    @media (min-width: 1440px) {
+      background-color: #ffffff;
+    }
+  }
+}
+
+.dealers-invitation__wrapper {
+  //
+}
+
+.dealers-invitation__title {
+  font-family: $font-additional;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-text-additional-black;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.dealers-invitation__description {
+  line-height: 20px;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+
+.dealers-invitation__map {
+  //
+}

@@ -1,0 +1,50 @@
+.programs {
+  //
+}
+
+.programs__wrapper {
+  //
+}
+
+.programs__list {
+  //
+}
+
+.programs__item {
+  background-color: $bg-color-primary;
+}
+
+.programs__title {
+  font-family: $font-additional;
+  font-size: 24px;
+  line-height: 37px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media (min-width: 768px) {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.programs__description {
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.programs__link {
+  font-family: $font-additional;
+  font-size: 16px;
+  line-height: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000000;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}

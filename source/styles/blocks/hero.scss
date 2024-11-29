@@ -1,0 +1,52 @@
+.hero {
+  // background-image: url("../../images/index/index-background-cat@2x.jpg"), linear-gradient(rgba(104, 183, 56, 0.85), (rgba(104, 183, 56, 0.85));
+  background-position: center, cover;
+  background-size: auto;
+  background-repeat: no-repeat;
+  font-family: $font-additional;
+  font-size: 36px;
+  line-height: 36px;
+  color: #ffffff;
+  background-color: #68b738;
+
+  @media (min-width: 1440px) {
+    color: $color-text-basic-black;
+  }
+
+  @media (min-width: 768px) {
+    color: $color-text-basic-black;
+    background-color: #ffffff;
+  }
+}
+
+.hero__title {
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  @media (min-width: 768px) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+
+.hero__description {
+  font-family: $font-additional;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.hero__image {
+  //
+}
+
+.hero__link {
+  //
+}

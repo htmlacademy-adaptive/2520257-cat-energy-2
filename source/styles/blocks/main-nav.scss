@@ -1,0 +1,48 @@
+.main-nav {
+  font-family: $font-additional;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.main-nav__wrapper {
+  //
+}
+
+.main-nav__list {
+  text-align: center;
+  list-style-type: none;
+}
+
+.main-nav__list a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color-text-basic-black;
+
+  @media (min-width: 1440px) {
+    font-size: 20px;
+    line-height: 30px;
+    color: #ffffff;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.main-nav__item {
+  //
+}
+
+.main-nav__button {
+  background-color: transparent;
+}
+
+.main-nav__button--toggle {
+  //
+}
+
+.main-nav__item--active {
+  //
+}

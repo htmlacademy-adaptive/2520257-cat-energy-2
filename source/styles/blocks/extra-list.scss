@@ -1,0 +1,41 @@
+.extra-list {
+  //
+}
+
+.extra-list__item {
+  //
+}
+
+.extra-list__title {
+  font-family: $font-additional;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $color-text-additional-black-2;
+
+  @media (min-width: 768px) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+.extra-list__description {
+  font-family: $font-additional;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-text-basic-grey;
+
+  @media (min-width: 768px) {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+.extra-list__price {
+  //
+}
+
+.extra-list__link {
+  //
+}

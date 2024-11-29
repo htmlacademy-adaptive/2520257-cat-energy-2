@@ -1,0 +1,21 @@
+.button {
+  display: block;
+  padding: 10px;
+  font-family: $font-additional;
+  font-style: inherit;
+  font-weight: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  background-color: $bg-color-basic-green;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+
+  &--secondary {
+    background-color: $bg-color-primary;
+    color: $color-text-basic-grey;
+  }
+}

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html class="catalog" lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
-  <title>Название проекта</title>
+  <title>Каталог продукции</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="styles/styles.css">
   <link rel="icon" href="favicon.ico">
@@ -13,22 +13,24 @@
   <script src="scripts/index.js" defer></script>
 </head>
 
-<body class="catalog__body">
+<body class="page__body">
   <header class="main-header">
     <a class="main-header__logo main-logo main-logo--header" href="index.html">
       <picture>
-        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="icons/logo-desktop.svg">
-        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="icons/logo-tablet.svg">
-        <img class="main-logo__icon" src="icons/logo-mobile.svg" width="33" height="38" alt="Логотип Супер Кот">
+        <source media="(min-width: 1440px)" width="70" height="59" type="image/svg+xml" srcset="images/logos/logo-desktop.svg">
+        <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logos/logo-tablet.svg">
+        <img class="main-logo__icon" src="images/logos/logo-mobile.svg" width="33" height="38" alt="Логотип Супер Кот">
       </picture>
       <picture>
-        <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="icons/logo-text">
-        <img class="main-logo__icon-name" src="icons/logo-text.svg" width="101" height="18" alt="Cat Energy">
+        <source media="(min-width: 1440px)" width="118" height="21" type="image/svg+xml" srcset="images/logos/logo-text.svg">
+        <img class="main-logo__icon-name" src="images/logos/logo-text.svg" width="101" height="18" alt="Cat Energy">
       </picture>
     </a>
     <nav class="main-nav">
-      <button class="main-nav__toggle button" type="button">
-        <span class="visually-hidden">Открыть меню.</span>
+      <button class="main-nav__button button main-nav__button--toggle" type="button">
+        <span class="visually-hidden">
+          Открыть меню.
+        </span>
       </button>
       <div class="main-nav__wrapper">
         <ul class="main-nav__list">
@@ -51,8 +53,8 @@
       </div>
     </nav>
   </header>
-  <main class="catalog-container catalog">
-    <section class="catalog__cards">
+  <main class="main-container">
+    <section class="catalog">
       <h1 class="catalog__title">
         Каталог продукции
       </h1>
@@ -66,7 +68,7 @@
           </picture>
         </a>
         <a class="card__link" href="#">
-          <h3 class="card__title">
+          <h3 class="card__title">n
             Cat Energy PRO<br>
             500 г
           </h3>
@@ -91,7 +93,7 @@
             700 ₽
           </dd>
         </dl>
-        <a class="card__link" href="#">
+        <a class="card__link button" href="#">
           Заказать
         </a>
       </article>
@@ -130,7 +132,7 @@
             1000 ₽
           </dd>
         </dl>
-        <a class="card__link" href="#">
+        <a class="card__link button" href="#">
           Заказать
         </a>
       </article>
@@ -169,7 +171,7 @@
             700 ₽
           </dd>
         </dl>
-        <a class="card__link" href="#">
+        <a class="card__link button" href="#">
           Заказать
         </a>
       </article>
@@ -208,7 +210,7 @@
             1000 ₽
           </dd>
         </dl>
-        <a class="card__link" href="#">
+        <a class="card__link button" href="#">
           Заказать
         </a>
       </article>
@@ -247,7 +249,7 @@
             700 ₽
           </dd>
         </dl>
-        <a class="card__link" href="#">
+        <a class="card__link button" href="#">
           Заказать
         </a>
       </article>
@@ -286,7 +288,7 @@
             1000 ₽
           </dd>
         </dl>
-        <a class="card__link" href="#">
+        <a class="card__link button" href="#">
           Заказать
         </a>
       </article>
@@ -325,7 +327,7 @@
             700 ₽
           </dd>
         </dl>
-        <a class="card__link" href="#">
+        <a class="card__link button" href="#">
           Заказать
         </a>
       </article>
@@ -354,10 +356,10 @@
             <p class="extra-list__description">
               1 упаковка (100 г)
             </p>
-            <p class="extra-list__price">
+            <p class="extra-list__description extra-list__price">
               200 ₽
             </p>
-            <a class="extra-list__link" href="#">
+            <a class="extra-list__link button" href="#">
               Заказать
             </a>
           </li>
@@ -368,10 +370,10 @@
             <p class="extra-list__description">
               5 литров
             </p>
-            <p class="extra-list__price">
+            <p class="extra-list__description extra-list__price">
               50 ₽
             </p>
-            <a class="extra-list__link" href="#">
+            <a class="extra-list__link button" href="#">
               Заказать
             </a>
           </li>
@@ -382,10 +384,10 @@
             <p class="extra-list__description">
               1 литр
             </p>
-            <p class="extra-list__price">
+            <p class="extra-list__description extra-list__price">
               100 ₽
             </p>
-            <a class="extra-list__link" href="#">
+            <a class="extra-list__link button" href="#">
               Заказать
             </a>
           </li>
@@ -396,16 +398,16 @@
             <p class="extra-list__description">
               1 упаковка (30 г)
             </p>
-            <p class="extra-list__price">
+            <p class="extra-list__description extra-list__price">
               300 ₽
             </p>
-            <a class="extra-list__link" href="#">
+            <a class="extra-list__link button" href="#">
               Заказать
             </a>
           </li>
         </ul>
-        <div class="catalog-extra__gift">
-          <p class="catalog-extra__gift-description">
+        <div class="catalog-extra__gift gift">
+          <p class="gift-description">
             Закажите все
             и получите чехол для
             кота в подарок!
@@ -425,12 +427,12 @@
           Укажите вашу электронную почту.
         </label>
         <input class="email-form__input" type="email" id="email" name="email" placeholder="кuklachev@gmail.com" required>
-        <button class="email-form__button" type="submit">
+        <button class="email-form__button button" type="submit">
           Подписаться
         </button>
       </form>
     </section>
-    <section class="dealers-invitation">
+    <section class="dealers-invitation dealers-invitation--bg">
       <div class="dealers-invitation__wrapper">
         <h2 class="dealers-invitation__title">
           приглашаем<br>к сотрудничеству<br>дилеров!
@@ -454,7 +456,7 @@
     <div class="main-footer__wraper">
       <div class="main-footer__logo main-logo main-logo--footer">
         <a class="main-logo__link" href="index.html">
-          <img class="main-logo__icon-name" src="icons/logo-text.svg" width="128" height="24" alt="Cat Energy">
+          <img class="main-logo__icon-name" src="images/logos/logo-text.svg" width="128" height="24" alt="Cat Energy">
         </a>
       </div>
       <div class="main-footer__social social">
@@ -476,7 +478,8 @@
       </div>
       <div class="main-footer__copyright copyright">
         <p class="copyright__title">HTML Academy</p>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML Academy.">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss" aria-label="Логотип HTML Academy.">
+          <img class="copyright__logo" src="images/logos/html-academy.svg" width="128" height="24" alt="Cat Energy">
         </a>
       </div>
     </div>
