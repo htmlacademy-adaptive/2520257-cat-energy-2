@@ -29,5 +29,11 @@
 }
 
 .catalog-extra__gift {
-  //
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+  min-height: 290px;
+  padding: 60px;
 }

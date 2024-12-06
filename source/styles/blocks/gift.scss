@@ -11,5 +11,15 @@
 }
 
 .gift-description {
-  //
+  &::before {
+    content: "";
+    display: block;
+    mask-image: url("../../icons/stack.svg#gift");
+    background-color: #ffffff;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 78px 80px;
+    width: 78px;
+    height: 80px;
+  }
 }

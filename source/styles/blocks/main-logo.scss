@@ -1,5 +1,22 @@
 .main-logo {
-  //
+  display: block;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &--header {
+    //
+  }
+
+  &--footer {
+    //
+  }
 }
 
 .main-logo__icon {
@@ -7,13 +24,5 @@
 }
 
 .main-logo__icon-name {
-  //
-}
-
-.main-logo--header {
-  //
-}
-
-.main-logo--footer {
   //
 }

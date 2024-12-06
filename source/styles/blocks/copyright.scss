@@ -1,15 +1,38 @@
 .copyright {
-  //
-}
-
-.copyright__title {
-  //
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 23px;
 }
 
 .copyright__link {
-  //
-}
+  color: $color-text-basic-grey;
+  font-size: 16px;
+  line-height: 20px;
 
-.copyright__logo {
-  //
+  &::after {
+    content: "";
+    display: block;
+
+    width: 27px;
+    height: 34px;
+    mask-image: url("../../icons/stack.svg#html-academy");
+    background-color: $color-text-basic-grey-2;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 27px 34px;
+  }
+
+  &:hover::after,
+  &:focus-visible::after {
+    background-color: $bg-color-basic-green;
+  }
+
+  &:active::after {
+    background-color: $bg-color-basic-green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }

@@ -1,13 +1,38 @@
 .card {
+  display: grid;
+
   @media (min-width: 768px) {
     background-color: $bg-color-primary;
   }
 
   &--more {
-    text-align: center;
+    position: relative;
     border: 2px solid $bg-color-primary;
     background-color: transparent;
     color: $color-text-additional-black;
+  }
+
+  &--more .card__title {
+    &::before {
+      content: "";
+      width: 60px;
+      height: 2px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-text-additional-grey-3;
+      position: absolute;
+    }
+
+    &::after {
+      content: "";
+      width: 2px;
+      top: -30px;
+      height: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: $color-text-additional-grey-3;
+      position: absolute;
+    }
   }
 }
 

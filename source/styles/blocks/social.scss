@@ -3,6 +3,10 @@
 }
 
 .social__list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  gap: 24px;
   list-style-type: none;
 }
 
@@ -11,17 +15,53 @@
 }
 
 .social__link {
-  //
-}
+  display: block;
+  width: 28px;
+  height: 22px;
 
-.social__link--vk-logo {
-  //
-}
+  &--vk-logo {
+    mask-image: url("../../icons/stack.svg#vkontakte");
+    background-color: $color-text-basic-grey-2;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 27px 17px;
+  }
 
-.social__link--yt-logo {
-  //
-}
+  &--yt-logo {
 
-.social__link--telegram-logo {
-  //
+    // Вариант с превдоэлементом, чтобы был стандартный браузерный фокус
+    // &::before {
+    //   content: "";
+    //   display: block;
+    //   width: 28px;
+    //   height: 22px;
+    mask-image: url("../../icons/stack.svg#youtube");
+    background-color: $color-text-basic-grey-2;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 24px 19px;
+  }
+
+
+  &--telegram-logo {
+    mask-image: url("../../icons/stack.svg#telegram");
+    background-color: $color-text-basic-grey-2;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: 20px 17px;
+  }
+
+  &:hover {
+    background-color: $bg-color-basic-green;
+  }
+
+  &:focus-visible {
+    background-color: $bg-color-basic-green;
+    border: 3px solid #83b3d3;
+  }
+
+  &:active {
+    background-color: $bg-color-basic-green;
+    opacity: 0.3;
+  }
 }

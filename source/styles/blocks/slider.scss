@@ -7,7 +7,64 @@
 }
 
 .slider__toggle {
-  //
+  margin: 0;
+  padding: 0;
+  bottom: 0;
+  left: 50%;
+  display: block;
+  cursor: pointer;
+  height: 100%;
+  border: none;
+  border-radius: 2px;
+  width: 4px;
+  background-color: $color-text-basic-grey-2;
+  position: absolute;
+
+  &::before {
+    content: "";
+    background-color: #ffffff;
+    background-position: center;
+    border: 2px solid $color-text-basic-grey-2;
+    border-radius: 50%;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%);
+  }
+
+  &::after {
+    content: "";
+    mask-image: url("../../icons/stack.svg#slider-arrows");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    position: absolute;
+    width: 24px;
+    height: 18px;
+    top: 51%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: $color-text-basic-grey-2;
+  }
+
+  &:hover,
+  &:hover::after {
+    background-color: $bg-color-basic-green;
+  }
+
+  &:hover::before {
+    border-color: $bg-color-basic-green;
+  }
+
+  &:active,
+  &:active::after {
+    background-color: rgba(94, 170, 47, 0.6);
+  }
+
+  &:active::before {
+    border-color: rgba(94, 170, 47, 0.6);
+  }
 }
 
 .slider__image {

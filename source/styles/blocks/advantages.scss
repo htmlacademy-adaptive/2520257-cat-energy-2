@@ -20,11 +20,20 @@
 }
 
 .advantages__list {
-  //
+  display: flex;
+  flex-direction: column;
 }
 
 .advantages__item {
-  //
+  &::before {
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-color: $bg-color-basic-green;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: block;
+  }
 }
 
 .advantages__description {
@@ -34,18 +43,30 @@
   }
 }
 
-.advantages__description--leaf {
-  //
+.advantages__item--leaf {
+  &::before {
+    background-image: url("../../icons/stack.svg#leaf");
+    background-size: 30px 32px;
+  }
 }
 
-.advantages__description--water {
-  //
+.advantages__item--water {
+  &::before {
+    background-image: url("../../icons/stack.svg#water");
+    background-size: 30px 32px;
+  }
 }
 
-.advantages__description--cutlery {
-  //
+.advantages__item--cutlery {
+  &::before {
+    background-image: url("../../icons/stack.svg#cutlery");
+    background-size: 30px 32px;
+  }
 }
 
-.advantages__description--time {
-  //
+.advantages__item--time {
+  &::before {
+    background-image: url("../../icons/stack.svg#time");
+    background-size: 30px 32px;
+  }
 }
