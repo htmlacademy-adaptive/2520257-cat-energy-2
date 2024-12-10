@@ -1,6 +1,4 @@
 .main-logo {
-  display: block;
-
   &:hover,
   &:focus-visible {
     opacity: 0.8;
@@ -25,4 +23,11 @@
 
 .main-logo__icon-name {
   //
+}
+
+@media (min-width: $desktop-width) {
+  .main-logo__icon-name {
+    height: 21px;
+    width: 118px;
+  }
 }

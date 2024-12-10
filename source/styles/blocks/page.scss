@@ -14,5 +14,25 @@
 }
 
 .page__body {
-  margin: 0, auto;
+  margin: 0 auto;
+  min-width: 320px;
+}
+
+@media (min-width: $tablet-width) {
+  .page {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .page__body {
+    max-width: calc($tablet-width + 200px);
+    // padding: 25px 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page__body {
+    max-width: $desktop-width;
+    // padding: 55px 80px;
+  }
 }

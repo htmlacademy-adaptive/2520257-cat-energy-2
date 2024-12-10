@@ -1,56 +1,54 @@
 .example {
   text-align: center;
   background-color: $bg-color-additional;
-
-  @media (min-width: 768px) {
-    background-color: #ffffff;
-  }
 }
 
 .example__wrapper {
-  @media (min-width: 1440px) {
-    background-color: $bg-color-additional;
-  }
+  padding: 20px;
 }
 
 .example__title {
+  padding: 0;
+  margin: 0;
+  text-align: left;
   font-family: $font-additional;
   font-size: 36px;
   line-height: 40px;
   font-weight: 400;
   color: #000000;
-
-  @media (min-width: 768px) {
-    font-size: 60px;
-    line-height: 60px;
-  }
 }
 
 .example__description {
-  @media (min-width: 768px) {
-    font-size: 16px;
-    line-height: 24px;
-  }
+  text-align: left;
 }
 
 .example__list {
-  //
+  padding: 0;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  gap: 32px;
+  max-width: calc($tablet-width - 200px);
 }
 
 .example__item {
-  //
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .example__stats {
+  min-width: 124px;
+  align-self: center;
   font-family: $font-additional;
   font-size: 24px;
   line-height: 24px;
   color: #000000;
-
-  @media (min-width: 768px) {
-    font-size: 30px;
-    line-height: 37px;
-  }
+  border: 1px solid $color-text-additional-grey-4;
+  border-radius: 3px;
+  text-transform: uppercase;
+  padding: 15px;
 }
 
 .example__stats-number {
@@ -58,14 +56,14 @@
 }
 
 .example__stats-description {
+  position: relative;
+  top: -45px;
   font-size: 12px;
   line-height: 12px;
-  color: $color-text-additional-grey;
-
-  @media (min-width: 768px) {
-    font-size: 14px;
-    line-height: 14px;
-  }
+  color: $color-text-basic-grey;
+  text-transform: lowercase;
+  width: 87px;
+  background-color: $bg-color-additional;
 }
 
 .example__costs {
@@ -73,16 +71,6 @@
   font-size: 14px;
   line-height: 20px;
   color: #000000;
-
-  @media (min-width: 1440px) {
-    font-size: 20px;
-    text-align: center;
-  }
-
-  @media (min-width: 768px) {
-    font-size: 20px;
-    text-align: end;
-  }
 }
 
 .example__costs-number {
@@ -91,4 +79,51 @@
 
 .example__images {
   position: relative;
+}
+
+//tablet
+
+@media (min-width: $tablet-width) {
+  .example {
+    background-color: #ffffff;
+  }
+
+  .example__wrapper {
+    background-color: $bg-color-additional;
+    padding: 30px;
+  }
+
+  .example__title {
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .example__description {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .example__stats {
+    font-size: 30px;
+    line-height: 37px;
+  }
+
+  .example__stats-description {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .example__costs {
+    font-size: 20px;
+    text-align: end;
+  }
+}
+
+//desktop
+
+@media (min-width: $desktop-width) {
+  .example__costs {
+    font-size: 20px;
+    text-align: center;
+  }
 }

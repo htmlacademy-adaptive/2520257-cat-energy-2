@@ -9,10 +9,16 @@
 }
 
 .dealers-invitation__wrapper {
-  //
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
 }
 
 .dealers-invitation__title {
+  margin: 0;
+  padding: 0;
   font-family: $font-additional;
   font-size: 16px;
   line-height: 20px;
@@ -35,5 +41,11 @@
 }
 
 .dealers-invitation__map {
-  //
+  justify-self: center;
+}
+
+@media (min-width: $tablet-width) {
+  .dealers-invitation__wrapper {
+    padding: 30px;
+  }
 }
