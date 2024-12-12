@@ -29,7 +29,9 @@
   .main-header__wrapper {
     flex-direction: row;
     justify-content: space-between;
+    margin: 0 auto;
     padding: 25px 30px;
+    max-width: $tablet-width + 200px;
   }
 
   .main-header__promo {
@@ -45,7 +47,6 @@
 @media (min-width: $desktop-width) {
   .main-header__wrapper {
     padding: 55px 30px;
-    margin: 0 auto;
     max-width: $desktop-width;
   }
 
