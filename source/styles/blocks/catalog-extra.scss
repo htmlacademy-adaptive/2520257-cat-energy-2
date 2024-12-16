@@ -67,14 +67,9 @@
   .catalog-extra__gift {
     padding: 50px;
     min-height: 200px;
+    margin-top: 70px;
     flex-direction: row;
     justify-content: space-around;
-  }
-}
-
-@media (min-width: $tablet-width) {
-  .catalog-extra__gift {
-    margin-top: 70px;
   }
 }
 
@@ -84,5 +79,14 @@
   .catalog-extra__title {
     font-size: 40px;
     line-height: 40px;
+  }
+
+  .catalog-extra__wrapper {
+    max-width: $desktop-width;
+  }
+
+  .catalog-extra__gift {
+    justify-content: end;
+    align-items: center;
   }
 }
