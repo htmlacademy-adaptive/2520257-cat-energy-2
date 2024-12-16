@@ -16,25 +16,26 @@
 <body class="page__body">
   <header class="main-header">
     <div class="main-header__wrapper page-container">
-      <a class="main-header__logo main-logo main-logo--header" href="index.html">
-        <picture>
-          <source media="(min-width: 1280px)" width="70" height="59" type="image/svg+xml" srcset="images/logos/logo-desktop.svg">
-          <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logos/logo-tablet.svg">
-          <img class="main-logo__icon" src="images/logos/logo-mobile.svg" width="33" height="38" alt="Логотип Супер Кот">
-        </picture>
-        <picture>
-          <source media="(min-width: 1280px)" width="118" height="21" type="image/svg+xml" srcset="images/logos/logo-text.svg">
-          <img class="main-logo__icon-name" src="images/logos/logo-text.svg" width="101" height="18" alt="Cat Energy">
-        </picture>
-      </a>
-      <nav class="main-nav">
-        <div class="main-nav__toggle">
-          <button class="main-nav__button main-nav__button--toggle" type="button">
-            <span class="visually-hidden">
-              Открыть меню.
-            </span>
-          </button>
-          <div class="main-nav__hamburger"></div>
+      <nav class="main-header__nav main-nav main-nav--no main-nav--bg-image">
+        <div class="main-nav__logo-wrapper">
+          <a class="main-nav__logo main-logo main-logo--header" href="index.html">
+            <picture>
+              <source media="(min-width: 1280px)" width="70" height="59" type="image/svg+xml" srcset="images/logos/logo-desktop.svg">
+              <source media="(min-width: 768px)" width="60" height="50" type="image/svg+xml" srcset="images/logos/logo-tablet.svg">
+              <img class="main-logo__icon" src="images/logos/logo-mobile.svg" width="33" height="38" alt="Логотип Супер Кот">
+            </picture>
+            <picture>
+              <source media="(min-width: 1280px)" width="118" height="21" type="image/svg+xml" srcset="images/logos/logo-text.svg">
+              <img class="main-logo__icon-name" src="images/logos/logo-text.svg" width="101" height="18" alt="Cat Energy">
+            </picture>
+          </a>
+          <div class="main-nav__toggle">
+            <button class="main-nav__button" type="button">
+              <span class="visually-hidden">
+                Открыть меню.
+              </span>
+            </button>
+          </div>
         </div>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
@@ -165,35 +166,36 @@
           без изнуряющих тренировок! При этом он не менял своих
           привычек и по-прежнему спит по 16 часов в день.
         </p>
-        <ul class="example__list">
-          <li class="example__item">
-            <p class="example__stats">
-              <span class="example__stats-number">
-                5
-              </span>
-              кг
-            </p>
-            <p class="example__stats-description">
-              Снижение<br>веса
-            </p>
-          </li>
-          <li class="example__item">
-            <p class="example__stats">
-              <span class="example__stats-number">
-                60
-              </span>
-              дней
-            </p>
-            <p class="example__stats-description">
-              Затрачено<br>времени
-            </p>
-          </li>
-        </ul>
-        <p class="example__costs">
-          Затраты на питание:
-          <span class="example__costs-number">15 000</span>
-          руб.
-        </p>
+        <div class="example__list-wrapper">
+          <ul class="example__list">
+            <li class="example__item">
+              <p class="example__stats">
+                <span class="example__stats-number">
+                  5
+                </span>
+                кг
+              </p>
+              <p class="example__stats-description">
+                Снижение веса
+              </p>
+            </li>
+            <li class="example__item">
+              <p class="example__stats">
+                <span class="example__stats-number">
+                  60
+                </span>
+                дней
+              </p>
+              <p class="example__stats-description">
+                Затрачено времени
+              </p>
+            </li>
+          </ul>
+          <p class="example__costs-wrapper">
+            <span class="example__costs">Затраты на питание:</span>
+            <span class="example__costs-number">15 000 руб.</span>
+          </p>
+        </div>
         <div class="example__images slider">
           <div class="slider__item">
             <picture>
@@ -227,6 +229,7 @@
         </address>
       </div>
       <div class="dealers-invitation__map map">
+        <iframe src="https://yandex.ru/map-widget/v1/?ll=30.317359%2C59.968322&mode=search&ol=geo&ouri=ymapsbm1%3A%2F%2Fgeo%3Fdata%3DCgg1NzQwNzQzNhJg0KDQvtGB0YHQuNGPLCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywg0L3QsNCx0LXRgNC10LbQvdCw0Y8g0YDQtdC60Lgg0JrQsNGA0L_QvtCy0LrQuCwgNdCfIgoN8onyQRWQ329C&source=serp_navig&z=17.05" height="400" width="320" allowfullscreen></iframe>
         <picture>
           <source media="(min-width: 1280px)" width="1440" height="400" type="image/png" srcset="images/map/map@1x.png 1x, images/map/map@2x.png 2x">
           <source media="(min-width: 768px)" width="768" height="400" type="image/png" srcset="images/map/map-tablet@1x.png 1x, images/map/map-tablet@2x.png 2x">
@@ -261,17 +264,17 @@
       </div>
       <div class="main-footer__copyright copyright">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/htmlcss">
-          <!-- Вариант с использованием use
-
+          <!-- Вариант с использованием use -->
+          HTML Academy
           <svg class="copyright__logo" width="27" height="34">
             <use href="../../icons/stack.svg#html-academy"></use>
-          </svg> -->
-          HTML Academy
+          </svg>
           <span class="visually-hidden" lang="en">Логотип HTML Academy.</span>
         </a>
       </div>
     </div>
   </footer>
+  <script src="scripts/index.js"></script>
 </body>
 
 </html>

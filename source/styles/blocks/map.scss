@@ -1,5 +1,12 @@
-.map {
-  //
+.map iframe,
+.map img {
+  .contacts iframe {
+    border: none;
+    display: block;
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+  }
 }
 
 .map__image {

@@ -1,11 +1,26 @@
 .card-description {
-  //
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .card-description__value {
-  //
+  grid-column: 1 / 2;
 }
 
 .card-description__result {
-  //
+  grid-column: 2 / -1;
+  text-align: end;
+  min-width: 55px;
+  text-transform: initial;
+}
+
+@media (min-width: $tablet-width) {
+  .card-description__result,
+  .card-description__value {
+    padding-bottom: 5px;
+    margin: 0;
+    margin-bottom: 5px;
+    border-bottom: 1px solid $color-text-additional-grey-4;
+  }
 }
