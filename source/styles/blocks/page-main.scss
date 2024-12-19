@@ -15,10 +15,10 @@
   border-bottom: 1px solid $color-text-additional-grey-2;
 
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet-width) {
     font-size: 60px;
     line-height: 60px;
-    padding-left: auto;
+    padding-left: 30px;
     border: none;
     margin-bottom: 161px;
   }
