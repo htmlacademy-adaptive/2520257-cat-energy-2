@@ -13,7 +13,11 @@
   padding: 24px 20px;
   align-items: center;
   justify-content: space-between;
-  max-width: 400px;
+  max-width: 500px;
+
+  &--catalog-bg-color {
+    background-color: $bg-color-primary;
+  }
 }
 
 .dealers-invitation__title {
@@ -42,12 +46,18 @@
 }
 
 .dealers-invitation__map {
-  justify-self: center;
+  grid-row: 1 / -1;
+  height: 362px;
 }
 
 @media (min-width: $tablet-width) {
   .dealers-invitation__wrapper {
     padding: 30px;
+    max-width: $desktop-width - 300;
+  }
+
+  .dealers-invitation__map {
+    height: 400px;
   }
 }
 
@@ -75,5 +85,9 @@
     padding: 60px 80px;
     margin-bottom: 10px;
     margin-right: auto;
+
+    &--catalog-bg-color {
+      display: none;
+    }
   }
 }

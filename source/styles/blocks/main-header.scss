@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 13px 20px;
 }
 
 .main-header__nav {
@@ -30,11 +29,11 @@
 
 @media (min-width: $desktop-width) {
   .main-header__wrapper {
-    padding: 55px 30px;
+    padding: 55px 30px 29px;
     max-width: $desktop-width;
   }
 
   .main-header__promo {
-    //
+    margin-bottom: 82px;
   }
 }

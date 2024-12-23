@@ -120,30 +120,41 @@
     border: none;
 
     &--more {
-      min-height: 419px;
+      min-height: 425px;
       padding: 40px 35px;
       padding-top: 48px;
       border: 2px solid $bg-color-primary;
       justify-content: center;
       background-color: transparent;
+    }
 
-      & .card__title {
-        margin-top: 110px;
-        margin-bottom: 23px;
-      }
+    & .card__title,
+    & .card__description {
+      width: 170px;
+    }
 
-      & .card__title,
-      & .card__description {
-        width: 170px;
-      }
-
-      .card__button {
-        height: 40px;
-        margin-top: 61px;
-        align-self: end;
-      }
+    .card__button {
+      height: 40px;
+      margin-top: 0;
+      align-self: end;
     }
   }
+
+  .card--more .card__title {
+    margin-top: 110px;
+    margin-bottom: 23px;
+
+    &::before {
+      width: 60px;
+      top: 80px;
+    }
+
+    &::after {
+      height: 60px;
+      top: 50px;
+    }
+  }
+
 
   .card__link {
     //
@@ -167,16 +178,6 @@
     margin: 0 auto;
     text-align: center;
     min-width: 150px;
-
-    &::before {
-      width: 60px;
-      top: 80px;
-    }
-
-    &::after {
-      height: 60px;
-      top: 50px;
-    }
   }
 
   .card__list {

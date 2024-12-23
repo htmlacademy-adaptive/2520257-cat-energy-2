@@ -4,21 +4,18 @@
   color: #ffffff;
   text-align: center;
   background-color: $bg-color-basic-green;
-
-  @media (min-width: 768px) and (max-width: 1439px) {
-    text-align: left;
-  }
-}
-
-.gift__description {
-  max-width: auto;
-  margin: 0 auto;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/gift/cat-in-backpack@2x.png");
+  background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   &::before {
     content: "";
     display: block;
     position: relative;
-    top: -50px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     justify-self: center;
     mask-image: url("../../icons/stack.svg#gift");
     background-color: #ffffff;
@@ -30,12 +27,26 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .gift__description {
+.gift__description {
+  max-width: auto;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+  .gift {
+    text-align: left;
+    background-position: 50% 63%;
+
     &::before {
       top: 50%;
-      left: -100px;
-      transform: translateY(-57%);
+      left: 15px;
+      transform: translateX(-50%);
     }
+  }
+
+  .gift__description {
+    width: 165px;
+    margin: 0;
+    margin-left: auto;
   }
 }

@@ -47,10 +47,11 @@
   .extra-list__item {
     grid-template-rows: repeat(2, auto);
     grid-template-columns: auto auto 91px;
-    padding: 20px;
+    padding: 28px 38px;
   }
 
   .extra-list__title {
+    padding: 0;
     grid-column: 1 / 2;
     font-size: 20px;
     line-height: 20px;
@@ -59,9 +60,10 @@
   .extra-list__description {
     justify-self: end;
     grid-column: 2 / 3;
-    grid-row: 1/ -1;
+    grid-row: 1 / -1;
     font-size: 16px;
     line-height: 20px;
+    margin-bottom: 25px;
   }
 
   .extra-list__price {
@@ -70,5 +72,31 @@
 
   .extra-list__link {
     grid-column: span 3;
+  }
+}
+
+//desktop
+
+@media (min-width: $desktop-width) {
+  .extra-list__item {
+    align-items: center;
+    grid-template-rows: none;
+    grid-template-columns: 326px auto 82px 244px;
+    padding: 15px 0;
+  }
+
+  .extra-list__price {
+    justify-self: end;
+    grid-column: 3 / -2;
+  }
+
+  .extra-list__description {
+    justify-self: left;
+    margin: 0;
+  }
+
+  .extra-list__link {
+    grid-column: 4 / -1;
+    grid-row: 1 / -1;
   }
 }
