@@ -95,8 +95,8 @@
 
 @media (min-width: $tablet-width) {
   .example {
-    background-color: #ffffff;
     position: relative;
+    background-color: $bg-color-basic-white;
 
     &::before {
       content: "";
@@ -116,6 +116,7 @@
 
   .example__list-wrapper {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 60px;
@@ -165,6 +166,8 @@
   }
 
   .example__images {
+    margin-top: auto;
+    margin-bottom: 0;
     padding-bottom: 95px;
   }
 }
@@ -172,10 +175,19 @@
 //desktop
 
 @media (min-width: $desktop-width) {
+  .example {
+    background-image: linear-gradient($bg-color-basic-white 191px, $bg-color-additional 110px);
+
+    &::before {
+      content: none;
+    }
+  }
+
   .example__wrapper {
     display: grid;
     grid-template-columns: auto auto;
     padding-top: 55px;
+    padding-bottom: 0;
     border: none;
   }
 
@@ -188,8 +200,9 @@
     grid-column: 2 / -1;
     grid-row: 1 / -5;
     padding: 0;
+    margin-top: 0;
     margin-left: auto;
-    margin-top: auto;
+    margin-bottom: auto;
   }
 
   .example__list-wrapper {

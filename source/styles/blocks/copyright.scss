@@ -12,7 +12,6 @@
   font-size: 16px;
   line-height: 20px;
   text-decoration: none;
-  transition: 0.2s ease-in-out;
 
   //вариант с маской
 
@@ -47,4 +46,5 @@
 
 .copyright__logo {
   fill: $color-text-basic-grey-2;
+  transition: 0.2s ease-in-out;
 }

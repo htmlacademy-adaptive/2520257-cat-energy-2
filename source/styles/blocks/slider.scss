@@ -47,6 +47,7 @@
   width: 4px;
   background-color: $color-text-basic-grey-2;
   position: absolute;
+  transition: 0.2s ease-in-out;
 
   &::before {
     content: "";
@@ -130,7 +131,13 @@
 
 @media (min-width: $desktop-width) {
   .slider__toggle {
-    margin-bottom: 45px;
-    height: calc(100% - 87px);
+    margin-bottom: -36px;
+    height: calc(100% - 5px);
+  }
+
+  .slider__item--primary {
+    &::after {
+      height: 382px;
+    }
   }
 }
