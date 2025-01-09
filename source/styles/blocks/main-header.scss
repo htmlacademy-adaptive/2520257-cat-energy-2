@@ -2,6 +2,49 @@
   color: $color-text-basic-black;
 }
 
-.main-header__logo {
+.main-header__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-header__nav {
   //
+}
+
+.main-header__promo {
+  //
+}
+
+@media (min-width: $tablet-width) {
+  .main-header__wrapper {
+    padding: 25px 30px;
+    max-width: $tablet-width + 200px;
+  }
+
+  .main-header__promo {
+    min-width: 768px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-header {
+    &--bg-image {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index/index-background-cat@2x.png"), linear-gradient(90deg, #3d3d42, #3e3c41);
+      background-position: 50vw;
+      background-size: contain;
+      background-repeat: no-repeat;
+      min-height: 694px;
+      margin-bottom: 82px;
+    }
+  }
+
+  .main-header__wrapper {
+    padding: 55px 30px 29px;
+    max-width: $desktop-width;
+  }
+
+  .main-header__promo {
+    margin-bottom: 82px;
+  }
 }

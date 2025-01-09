@@ -1,5 +1,5 @@
 .main-logo {
-  display: block;
+  transition: 0.2s ease-in-out;
 
   &:hover,
   &:focus-visible {
@@ -25,4 +25,17 @@
 
 .main-logo__icon-name {
   //
+}
+
+@media (min-width: $tablet-width) {
+  .main-logo__icon-name {
+    //
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-logo__link .main-logo__icon-name {
+    height: 30px;
+    width: 130px;
+  }
 }

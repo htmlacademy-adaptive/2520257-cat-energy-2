@@ -7,12 +7,14 @@
 }
 
 .programs__list {
-  //
+  margin: 0;
+  padding: 0;
 }
 
 .programs__item {
-  margin: 20px;
+  margin-bottom: 20px;
   padding: 20px;
+  padding-top: 30px;
   position: relative;
   list-style-type: none;
   background-color: $bg-color-primary;
@@ -20,9 +22,9 @@
 
 .programs__title {
   margin: 0;
-  margin-bottom: 22px;
-  padding: 9px;
-  padding-left: 81px;
+  margin-bottom: 29px;
+  padding: 0;
+  padding-left: 70px;
   font-family: $font-additional;
   font-size: 24px;
   line-height: 37px;
@@ -64,26 +66,22 @@
     background-position: center;
     background-repeat: no-repeat;
   }
-
-  @media (min-width: 768px) {
-    font-size: 36px;
-    line-height: 36px;
-  }
 }
 
 .programs__description {
-  margin-bottom: 38px;
-
-  @media (min-width: 768px) {
-    font-size: 16px;
-    line-height: 24px;
-  }
+  padding-bottom: 21px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid $color-text-additional-grey-2;
 }
 
 .programs__link {
   position: relative;
   margin: 0;
-  padding: 4px;
+  margin-right: 40px;
+  display: block;
+  width: fit-content;
+  padding: 4px 0;
+  padding-top: 0;
   font-family: $font-additional;
   font-size: 16px;
   line-height: 16px;
@@ -96,8 +94,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -30px;
-    display: block;
+    right: -35px;
     height: 2px;
     width: 18px;
     background-color: #000000;
@@ -108,7 +105,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    right: -40px;
+    right: -45px;
     display: block;
     width: 9px;
     height: 10px;
@@ -119,12 +116,12 @@
   &:hover::before {
     transition: all  0.3s ease;
     width: 32px;
-    right: -44px;
+    right: -49px;
   }
 
   &:hover::after {
     transition: all  0.3s ease;
-    right: -52px;
+    right: -56px;
   }
 
   // Решение через маску
@@ -151,9 +148,136 @@
   &:active {
     opacity: 0.3;
   }
+}
 
-  @media (min-width: 768px) {
+//tablet
+
+@media (min-width: $tablet-width) {
+  .programs__wrapper {
+    margin-bottom: 45px;
+  }
+
+  .programs__item {
+    padding: 77px 316px 53px 52px;
+    margin-bottom: 30px;
+  }
+
+  .programs__title {
+    padding-left: 0;
+    margin-bottom: 24px;
+    font-size: 36px;
+    line-height: 36px;
+
+    &::before {
+      top: 92px;
+      right: 63px;
+      margin-left: auto;
+      background-color: $bg-color-basic-green;
+      border-radius: 50%;
+      width: 200px;
+      height: 200px;
+    }
+
+    &--slim::after {
+      top: 81px;
+      right: 92px;
+      margin-left: auto;
+      width: 140px;
+      height: 194px;
+    }
+
+    &--pro::after {
+      top: 135px;
+      right: 29px;
+      margin-left: auto;
+      width: 268px;
+      height: 112px;
+    }
+  }
+
+  .programs__description {
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 52px;
+    font-size: 16px;
+    line-height: 24px;
+    border: none;
+  }
+
+  .programs__link {
     font-size: 20px;
     line-height: 30px;
+
+    &::before {
+      top: 44%;
+      right: -45px;
+    }
+
+    &::after {
+      top: 44%;
+      right: -55px;
+    }
+
+    &:hover::before {
+      right: -59px;
+    }
+
+    &:hover::after {
+      right: -66px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .programs__wrapper {
+    margin-bottom: 40px;
+  }
+
+  .programs__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px;
+  }
+
+  .programs__item {
+    min-width: 490px;
+    max-width: 570px;
+    padding: 55px 52px;
+  }
+
+  .programs__title {
+    font-weight: 36px;
+    line-height: 36px;
+    margin-bottom: 74px;
+    padding-left: 161px;
+    padding-top: 21px;
+
+    &::before {
+      margin-left: 0;
+      top: 46px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+
+    &--slim::after {
+      margin-left: 0;
+      top: 40px;
+      left: 67px;
+      width: 70px;
+      height: 97px;
+    }
+
+    &--pro::after {
+      margin-left: 0;
+      top: 45px;
+      left: 33px;
+      width: 134px;
+      height: 100px;
+    }
+  }
+
+  .programs__description {
+    margin-bottom: 27px;
   }
 }

@@ -1,21 +1,41 @@
 .card {
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 9px;
 
-  @media (min-width: 768px) {
-    background-color: $bg-color-primary;
-  }
 
   &--more {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 0;
+    border-bottom: 0;
+    padding: 25px 20px;
     position: relative;
-    border: 2px solid $bg-color-primary;
     background-color: transparent;
     color: $color-text-additional-black;
+
+    &::after {
+      content: "";
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+      background-color: $color-text-additional-grey-2;
+      box-shadow: 100vw 0 0 0 $color-text-additional-grey-2;
+    }
   }
 
   &--more .card__title {
+    justify-self: center;
+    max-width: 100%;
+    margin: 52px 0 8px;
+    color: $color-text-additional-black;
+
     &::before {
       content: "";
-      width: 60px;
+      width: 30px;
+      top: 38px;
       height: 2px;
       left: 50%;
       transform: translateX(-50%);
@@ -26,18 +46,42 @@
     &::after {
       content: "";
       width: 2px;
-      top: -30px;
-      height: 60px;
+      top: 24px;
+      height: 30px;
       left: 50%;
       transform: translateX(-50%);
       background-color: $color-text-additional-grey-3;
       position: absolute;
     }
   }
+
+  &--more .card__description {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 21px;
+    color: $color-text-basic-grey;
+  }
 }
 
 .card__link {
+  grid-column: 1 / 2;
   text-decoration: none;
+}
+
+.card__link-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.card__text-wrapper {
+  grid-column: 2 / -1;
+  align-self: center;
+}
+
+.card__button {
+  grid-column: 1 / -1;
 }
 
 .card__image {
@@ -45,18 +89,15 @@
 }
 
 .card__title {
+  margin: 0;
+  margin-bottom: 14px;
+  max-width: 80px;
   font-family: $font-additional;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
   color: $color-text-additional-black-2;
-
-  @media (min-width: 768px) {
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-  }
 }
 
 .card__list {
@@ -78,5 +119,120 @@
   @media (min-width: 768px) {
     font-size: 16px;
     line-height: 18px;
+  }
+}
+
+//tablet
+
+@media (min-width: $tablet-width) {
+  .card {
+    gap: 0;
+    grid-template-columns: none;
+    background-color: $bg-color-primary;
+    border: none;
+
+    &--more {
+      min-height: 425px;
+      padding: 40px 35px 39px;
+      padding-top: 48px;
+      border: 2px solid $bg-color-primary;
+      justify-content: center;
+      background-color: transparent;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    & .card__title,
+    & .card__description {
+      width: 170px;
+      justify-self: center;
+    }
+
+    .card__button {
+      height: 40px;
+      margin-top: 0;
+      align-self: end;
+    }
+  }
+
+  .card--more .card__title {
+    margin-top: 111px;
+    margin-bottom: -8px;
+
+    &::before {
+      width: 60px;
+      top: 80px;
+    }
+
+    &::after {
+      height: 60px;
+      top: 50px;
+    }
+  }
+
+  .card--more .card__button {
+    min-width: 250px;
+  }
+
+  .card__link {
+    //
+  }
+
+  .card__link-image {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 90%;
+    top: 8%;
+  }
+
+  .card__text-wrapper {
+    padding-top: 120px;
+  }
+
+  .card__title {
+    font-size: 20px;
+    line-height: 24px;
+    margin: 0 auto;
+    text-align: center;
+    min-width: 150px;
+  }
+
+  .card__list {
+    margin-top: 20px;
+    margin-bottom: 25px;
+  }
+}
+
+//desktop
+
+@media (min-width: $desktop-width) {
+  .card--more {
+    padding-top: 36px;
+  }
+
+  .card--more .card__title {
+    &::before {
+      top: 77px;
+    }
+
+    &::after {
+      top: 47px;
+    }
+  }
+
+  .card--more .card__button {
+    min-width: 169px;
+  }
+
+  .card__text-wrapper {
+    padding-top: 110px;
+  }
+
+  .card__list {
+    margin-top: 25px;
+    margin-bottom: 24px;
   }
 }

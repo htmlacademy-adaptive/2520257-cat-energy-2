@@ -1,19 +1,26 @@
 .gift {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 58px 53px 44px 48px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
   text-align: center;
   background-color: $bg-color-basic-green;
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/gift/cat-in-backpack@2x.png");
+  background-position: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
 
-  @media (min-width: 768px) and (max-width: 1439px) {
-    text-align: left;
-  }
-}
-
-.gift-description {
   &::before {
     content: "";
     display: block;
+    position: relative;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    justify-self: center;
     mask-image: url("../../icons/stack.svg#gift");
     background-color: #ffffff;
     mask-repeat: no-repeat;
@@ -21,5 +28,39 @@
     mask-size: 78px 80px;
     width: 78px;
     height: 80px;
+  }
+}
+
+.gift__description {
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+  .gift {
+    text-align: left;
+    flex-direction: row;
+    background-position: 40% 60%;
+    padding-left: 103px;
+    padding-top: 43px;
+    padding-right: 120px;
+
+    &::before {
+      top: 50%;
+      left: 15px;
+      transform: translateX(-50%);
+    }
+  }
+
+  .gift__description {
+    width: 165px;
+    margin: 0;
+    margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gift {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
