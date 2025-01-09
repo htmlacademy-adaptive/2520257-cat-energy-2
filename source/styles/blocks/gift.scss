@@ -1,4 +1,8 @@
 .gift {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 58px 53px 44px 48px;
   font-size: 16px;
   line-height: 20px;
   color: #ffffff;
@@ -28,14 +32,17 @@
 }
 
 .gift__description {
-  max-width: auto;
   margin: 0 auto;
 }
 
 @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
   .gift {
     text-align: left;
-    background-position: 50% 63%;
+    flex-direction: row;
+    background-position: 40% 60%;
+    padding-left: 103px;
+    padding-top: 43px;
+    padding-right: 120px;
 
     &::before {
       top: 50%;
@@ -48,5 +55,12 @@
     width: 165px;
     margin: 0;
     margin-left: auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .gift {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

@@ -69,18 +69,23 @@
 
 .main-nav__logo-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   margin: 0 auto;
-  padding: 14px 0;
+  padding: 14px 0 13px;
   max-width: $tablet-width - 200px;
 }
 
 .main-nav__logo {
   display: flex;
-  gap: 59px;
+  gap: 57px;
   justify-content: space-between;
   align-items: center;
+}
+
+.main-logo__icon-name {
+  margin-top: 4px;
 }
 
 .main-nav__list {
@@ -98,6 +103,24 @@
 
 .main-nav__item {
   padding: 23px;
+  transition: 0.2s ease-in-out;
+
+  &:not(:disabled):hover {
+    opacity: 0.6;
+  }
+
+  &:not(:disabled):focus-visible {
+    //
+  }
+
+  &:not(:disabled):active {
+    opacity: 0.3;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: default;
+  }
 }
 
 .main-nav__toggle {
@@ -106,42 +129,14 @@
   align-items: center;
   width: 24px;
   height: 24px;
+  bottom: 2px;
 
   &:hover {
     cursor: pointer;
   }
 }
 
-// .main-nav__hamburger {
-//   position: relative;
-//   top: 0;
-//   left: 0;
-//   border: none;
-//   margin: 0;
-//   padding: 0;
-//   background: #000000;
-//   height: 2px;
-//   width: 100%;
-
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     top: -8px;
-//     width: 100%;
-//     height: 2px;
-//     left: 50%;
-//     transform: translateX(-50%);
-//     background-color: #000000;
-//   }
-
-//   &::after {
-//     top: 8px;
-//   }
-
-.main-nav__item--active {
-  //
-}
+//only mobile
 
 @media (max-width: ($tablet-width - 1)) {
   .main-nav__wrapper {
@@ -187,11 +182,12 @@
   .main-nav__logo {
     justify-content: flex-start;
     margin: 0;
-    gap: 10px;
+    gap: 13px;
   }
 
   .main-nav__logo-wrapper {
     margin: 0;
+    padding: 0;
   }
 
   .main-nav__wrapper {
@@ -209,7 +205,9 @@
     display: flex;
     justify-content: flex-end;
     flex-wrap: wrap;
-    gap: 33px;
+    gap: 34px;
+    max-width: 600px;
+    margin-right: 4px;
   }
 
   .main-nav__list a {
@@ -218,7 +216,7 @@
   }
 
   .main-nav__item {
-    padding: 8px 0;
+    padding: 9px 0 7px;
   }
 
   .main-nav__item--active {
@@ -231,31 +229,42 @@
 @media (min-width: $desktop-width) {
   .main-nav {
     &--bg-image {
-      background-image: $bg-color-basic-green;
-
-      &::after {
-        content: "";
-        position: absolute;
-        z-index: -1;
-        width: 50%;
-        right: 0;
-        top: 0;
-        min-height: 690px;
-        background-color: $bg-color-basic-green;
-        background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index/index-background-cat@2x.png");
-        background-position: 0 50%;
-        background-size: cover;
-        background-repeat: no-repeat;
-      }
+      // вариант с фоновым изображением через псевдоэлемент
+      //&::after {
+      // content: "";
+      // position: absolute;
+      // z-index: -1;
+      // width: 50%;
+      // right: 0;
+      // top: 0;
+      // min-height: 694px;
+      // background-color: $bg-color-basic-green;
+      // background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index/index-background-cat@2x.png");
+      // background-position: 0 50%;
+      // background-size: cover;
+      // background-repeat: no-repeat;
+      //}
 
       & .main-nav__list a {
         color: #ffffff;
       }
+
+      & .main-nav__item--active {
+        border-bottom: 2px solid #ffffff;
+      }
     }
   }
 
-  .main-nav__list {
+  .main-nav__wrapper {
+    align-self: center;
+  }
+
+  .main-nav__item {
     //
+  }
+
+  .main-nav__list {
+    margin-right: 0;
   }
 
   .main-nav__list a {

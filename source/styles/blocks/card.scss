@@ -1,30 +1,41 @@
 .card {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 25px;
+  row-gap: 9px;
 
 
   &--more {
     grid-template-columns: 1fr;
     text-align: center;
     gap: 0;
-    border-bottom: none;
+    border-bottom: 0;
     padding: 25px 20px;
     position: relative;
     background-color: transparent;
     color: $color-text-additional-black;
+
+    &::after {
+      content: "";
+      bottom: 0;
+      right: 0;
+      position: absolute;
+      height: 1px;
+      width: 100vw;
+      background-color: $color-text-additional-grey-2;
+      box-shadow: 100vw 0 0 0 $color-text-additional-grey-2;
+    }
   }
 
   &--more .card__title {
     justify-self: center;
     max-width: 100%;
-    margin: 60px 0 8px;
+    margin: 52px 0 8px;
     color: $color-text-additional-black;
 
     &::before {
       content: "";
       width: 30px;
-      top: 40px;
+      top: 38px;
       height: 2px;
       left: 50%;
       transform: translateX(-50%);
@@ -35,7 +46,7 @@
     &::after {
       content: "";
       width: 2px;
-      top: 25px;
+      top: 24px;
       height: 30px;
       left: 50%;
       transform: translateX(-50%);
@@ -61,6 +72,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 5px;
 }
 
 .card__text-wrapper {
@@ -121,16 +133,21 @@
 
     &--more {
       min-height: 425px;
-      padding: 40px 35px;
+      padding: 40px 35px 39px;
       padding-top: 48px;
       border: 2px solid $bg-color-primary;
       justify-content: center;
       background-color: transparent;
+
+      &::after {
+        content: none;
+      }
     }
 
     & .card__title,
     & .card__description {
       width: 170px;
+      justify-self: center;
     }
 
     .card__button {
@@ -141,8 +158,8 @@
   }
 
   .card--more .card__title {
-    margin-top: 110px;
-    margin-bottom: 23px;
+    margin-top: 111px;
+    margin-bottom: -8px;
 
     &::before {
       width: 60px;
@@ -155,6 +172,9 @@
     }
   }
 
+  .card--more .card__button {
+    min-width: 250px;
+  }
 
   .card__link {
     //
@@ -164,12 +184,12 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 92%;
+    bottom: 90%;
     top: 8%;
   }
 
   .card__text-wrapper {
-    padding-top: 124px;
+    padding-top: 120px;
   }
 
   .card__title {
@@ -181,14 +201,38 @@
   }
 
   .card__list {
-    margin-bottom: 23px;
+    margin-top: 20px;
+    margin-bottom: 25px;
   }
 }
 
 //desktop
 
 @media (min-width: $desktop-width) {
-  .card {
-    //
+  .card--more {
+    padding-top: 36px;
+  }
+
+  .card--more .card__title {
+    &::before {
+      top: 77px;
+    }
+
+    &::after {
+      top: 47px;
+    }
+  }
+
+  .card--more .card__button {
+    min-width: 169px;
+  }
+
+  .card__text-wrapper {
+    padding-top: 110px;
+  }
+
+  .card__list {
+    margin-top: 25px;
+    margin-bottom: 24px;
   }
 }

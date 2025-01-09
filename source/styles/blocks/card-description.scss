@@ -20,7 +20,15 @@
   .card-description__value {
     padding-bottom: 5px;
     margin: 0;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     border-bottom: 1px solid $color-text-additional-grey-4;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .card-description__result,
+  .card-description__value {
+    margin-bottom: 8px;
+    padding-bottom: 5px;
   }
 }

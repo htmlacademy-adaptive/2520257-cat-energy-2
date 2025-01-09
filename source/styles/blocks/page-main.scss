@@ -2,10 +2,15 @@
   //
 }
 
+.page-main__wrapper {
+  //
+}
+
 .page-main__title {
   text-align: left;
-  padding: 27px 0 41px;
-  padding-left: calc(20% - 40px);
+  margin: 0 auto;
+  padding: 26px 10px 41px;
+  padding-left: calc(20% - 44px);
   font-family: $font-additional;
   font-size: 36px;
   line-height: 36px;
@@ -16,10 +21,17 @@
 
 
   @media (min-width: $tablet-width) {
+    padding-top: 39px;
     font-size: 60px;
     line-height: 60px;
-    padding-left: 30px;
+    padding-left: calc($adaptive-padding - 40px);
     border: none;
-    margin-bottom: 161px;
+    margin-bottom: 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 44px;
+    padding-left: 30px;
+    max-width: $desktop-width;
   }
 }
