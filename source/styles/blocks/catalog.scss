@@ -1,17 +1,9 @@
-.catalog {
-  //
-}
-
 .catalog__wrapper {
   display: grid;
   justify-content: center;
   min-width: 320px;
   max-width: $desktop-width;
   margin: 0 auto;
-}
-
-.catalog__cards {
-  //
 }
 
 .catalog__item {

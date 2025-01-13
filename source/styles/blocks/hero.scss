@@ -97,10 +97,6 @@
     font-size: 20px;
     line-height: 26px;
   }
-
-  .hero__image {
-    //
-  }
 }
 
 @media (max-width: ($tablet-width - 1)) {
@@ -123,6 +119,8 @@
     padding-bottom: 0;
     margin: 0;
     margin-top: 40px;
+
+    //Вариант решения через позиционирование.
     // &::after {
     //   content: "";
     //   position: absolute;
