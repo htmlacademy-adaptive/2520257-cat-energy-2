@@ -1,0 +1,19 @@
+.main-logo {
+  transition: 0.2s ease-in-out;
+
+  &:hover,
+  &:focus-visible {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-logo__link .main-logo__icon-name {
+    height: 30px;
+    width: 130px;
+  }
+}

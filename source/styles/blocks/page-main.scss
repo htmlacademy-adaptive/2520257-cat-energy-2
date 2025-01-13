@@ -1,0 +1,29 @@
+.page-main__title {
+  text-align: left;
+  margin: 0 auto;
+  padding: 26px 10px 41px;
+  padding-left: calc(20% - 44px);
+  font-family: $font-additional;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  color: #000000;
+  border-top: 1px solid $color-text-additional-grey-2;
+  border-bottom: 1px solid $color-text-additional-grey-2;
+
+
+  @media (min-width: $tablet-width) {
+    padding-top: 39px;
+    font-size: 60px;
+    line-height: 60px;
+    padding-left: calc($adaptive-padding - 40px);
+    border: none;
+    margin-bottom: 95px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 44px;
+    padding-left: 30px;
+    max-width: $desktop-width;
+  }
+}
