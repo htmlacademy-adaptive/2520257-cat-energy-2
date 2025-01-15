@@ -8,7 +8,7 @@
   color: #ffffff;
   text-align: center;
   background-color: $bg-color-basic-green;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/gift/cat-in-backpack@2x.png");
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../images/gift/cat-in-backpack@1x.webp" 1x type("image/webp"), "../images/gift/cat-in-backpack@2x.webp" 2x type("image/webp"), "../images/gift/cat-in-backpack@1x.jpeg" 1x type("image/jpg"), "../images/gift/cat-in-backpack@2x.jpeg" 2x type("image/jpg"));
   background-position: 100%;
   background-size: cover;
   background-repeat: no-repeat;

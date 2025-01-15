@@ -1,5 +1,10 @@
-$font-primary: "Lato", sans-serif;
-$font-additional: "Oswald", sans-serif;
+//font
+
+$font-primary: "Lato", "Arial", sans-serif;
+$font-additional: "Oswald", "Arial", sans-serif;
+
+//color
+
 $color-text-basic-black: #000000;
 $color-text-additional-black: #111111;
 $color-text-additional-black-2: #222222;
@@ -17,6 +22,9 @@ $bg-color-additional: #eaeaea;
 $bg-color-basic-green: #68b738;
 $bg-color-basic-green-2:#5eaa2f;
 $bg-color-basic-white: #ffffff;
+
+//viewport
+
 $tablet-width: 768px;
 $desktop-width: 1280px;
 $adaptive-padding: calc(30% - 160px);
