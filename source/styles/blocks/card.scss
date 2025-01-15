@@ -66,6 +66,15 @@
 .card__link {
   grid-column: 1 / 2;
   text-decoration: none;
+  transition: 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .card__link-image {
@@ -73,6 +82,18 @@
   justify-content: center;
   align-items: center;
   margin-bottom: 5px;
+  transition: 0.2s ease-in-out;
+  transform-origin: center;
+
+  &:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+  }
+
+  &:active {
+    opacity: 0.8;
+    filter: blur(0.5px);
+  }
 }
 
 .card__text-wrapper {
@@ -178,6 +199,10 @@
     transform: translateX(-50%);
     bottom: 90%;
     top: 8%;
+
+    &:hover {
+      transform: scale(1.1) translateX(-45%) translateY(-45%);
+    }
   }
 
   .card__text-wrapper {

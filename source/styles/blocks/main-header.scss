@@ -22,7 +22,7 @@
 @media (min-width: $desktop-width) {
   .main-header {
     &--bg-image {
-      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../../images/index/index-background-cat@2x.png"), linear-gradient(90deg, #3d3d42, #3e3c41);
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), image-set("../images/index/index-background-cat@1x.webp" 1x type("image/webp"), "../images/index/index-background-cat@2x.webp" 2x type("image/webp"), "../images/index/index-background-cat@1x.jpeg" 1x type("image/jpg"), "../images/index/index-background-cat@2x.jpeg" 2x type("image/jpg")), linear-gradient(90deg, #3d3d42, #3e3c41);
       background-position: 50vw;
       background-size: contain;
       background-repeat: no-repeat;
